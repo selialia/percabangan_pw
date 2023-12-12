@@ -1,15 +1,17 @@
-function hitung() {
-  let angka = document.getElementById("nilai").value;
-
-  if (angka >= 0 && angka <= 70) {
-    document.getElementById("hasil").innerHTML = "remidial";
-  } else if (angka >= 71 && angka <= 79) {
-    document.getElementById("hasil").innerHTML = "NilaiC";
-  } else if (angka >= 80 && angka <= 89) {
-    document.getElementById("hasil").innerHTML = "NilaiB";
-  } else if (angka >= 90 && angka <= 100) {
-    document.getElementById("hasil").innerHTML = "NilaiA";
-  } else {
-    document.writeln("Input salah");
-  }
+let belanja = parseInt(prompt("Masukan total : "));
+if (belanja >= 0 && belanja <= 99999){
+    document.writeln(`Anda belanja = ${belanja}`)
+    document.writeln('Anda tidak mendapat diskon')
+}else if(belanja >= 100000 && belanja < 200001 ){
+    document.writeln(`Anda belanja = ${belanja} `)
+    document.writeln('Diskon 10 %')
+    let diskon = belanja*10/100;
+    document.writeln(`total bayar = ${belanja - diskon}`)
+}else if(belanja >= 200000 ){
+    document.writeln(`Anda belanja = ${belanja} `)
+    document.writeln('Diskon 25 %')
+    let diskon = belanja*25/100;
+    document.writeln(`total bayar = ${belanja - diskon}`)
+}else if(belanja < 0){
+    document.writeln('Nilai yang anda masukan salah')
 }
